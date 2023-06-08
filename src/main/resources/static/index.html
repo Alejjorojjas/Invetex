@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+          crossorigin="anonymous"
+  />
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="styles/inicio.css" />
+  <link rel="shortcut icon" href="images/logo2.ico" type="image/x-icon" />
+  <title>Invetex</title>
+</head>
+<body>
+<header class="container-fluid main">
+  <main class="row">
+    <div class="col container-sm container__logo">
+      <div class="d-flex justify-content-center login__contenedor__logo">
+        <img src="images/logo.PNG" class="img-fluid" alt="Logo Invetex" />
+      </div>
+    </div>
+    <div class="col container-sm d-flex justify-content-center d-flex align-items-center container__formulario">
+      <form id="formulario">
+        <h2 class="login__subtitulo">Iniciar sesión</h2>
+        <br />
+        <label for="email" class="form-label">Tu correo</label>
+        <div class="mb-3 d-flex justify-content-around">
+          <i class="bi bi-envelope-at-fill"></i>
+          <input
+                  type="email"
+                  class="form-control"
+                  maxlength="60"
+                  id="email"
+                  placeholder="you@example.com"
+                  autofocus
+          />
+        </div>
+        <label for="pass" class="form-label">Tu contraseña</label>
+        <div class="mb-3 d-flex justify-content-around">
+          <i class="bi bi-key-fill"></i>
+          <input
+                  type="password"
+                  class="form-control"
+                  minlength="2"
+                  maxlength="30"
+                  id="pass"
+                  placeholder="Ingrese su contraseña"
+          />
+        </div>
+        <div class="d-grid gap-2">
+          <input type="submit" class="btn btn-primary" value="Ingresar" >
+        </div>
+        <div class="d-flex justify-content-between">
+          <a class="registro__parrafo" href="registro.html"
+          ><p>Registrarse</p></a
+          >
+        </div>
+      </form>
+    </div>
+  </main>
+</header>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Peralta&family=Poppins:wght@300&display=swap");
+
+:root {
+  --color_fondo: #fe330a;
+  --fuente_titulos: "Poppins", sans-serif;
+  --color_fondo2: #113941;
+}
+/*Login*/
+/*Estilos del contenedor principal y del contenedor del logo*/
+body {
+  box-sizing: border-box;
+}
+.main {
+  height: 100vh;
+}
+.container__logo {
+  height: 100vh;
+}
+.login__contenedor__logo {
+  margin-top: 33vh;
+}
+
+/*Estilos del contenedor del formulario de login*/
+.container__formulario {
+  background-color: var(--color_fondo2);
+}
+.form-control {
+  border-radius: 0;
+}
+.bi {
+  background-color: #e9e7e7;
+  color: var(--color_fondo2);
+  font-size: 1.4rem;
+  padding: 5px;
+}
+form{
+    width: 80%;
+}
+
+.form-select {
+  border-radius: 0;
+  width: 25%;
+  margin-right: 15px;
+  font-family: var(--fuente_titulos);
+  font-size: 12px;
+}
+.form-label {
+  color: #ffffff;
+  font-family: var(--fuente_titulos);
+}
+
+/*Estilos para el subtitulo del formulario*/
+.login__subtitulo {
+  color: #ffffff;
+  font-family: var(--fuente_titulos);
+  font-size: 40px;
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--color_fondo);
+  border: var(--color_fondo);
+  font-family: var(--fuente_titulos);
+}
+
+/*Estilos para los vinculos hacia otros modulos*/
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*Color de fondo para el vinculo que me redirecciona al login*/
+.registro__color__vinculo {
+  color: var(--color_fondo);
+  font-family: var(--fuente_titulos);
+}
+/*Estilos para los vinculos*/
+.registro__parrafo {
+  font-family: var(--fuente_titulos);
+  color: #ffffff;
+}
+
+/*Estilos para la pseudo clase placehorlder*/
+::placeholder {
+  font-size: 15px;
+  font-family: var(--fuente_titulos);
+}
+
+@media screen and (max-width: 660px) {
+  .login__subtitulo {
+    font-size: 25px;
+  }
+}

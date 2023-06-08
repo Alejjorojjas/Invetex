@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Peralta&family=Poppins:wght@300&display=swap");
+
+/*Raiz del documento html donde creo las variables de los colores corporativos y la fuente del software*/
+:root {
+  --color_fondo: #fe330a;
+  --color_fondo2: #113941;
+  --fuente_titulos: "Poppins", sans-serif;
+}
+.column__menu2 {
+  height: 70vh;
+}
+.table {
+  margin-top: 30px;
+  display: block;
+  height: 40vh;
+  overflow-y: auto;
+}
+
+.btn-search {
+  width: 20%;
+  color: #ffffff;
+}
+
+.btn-search:hover {
+  background-color: var(--color_fondo2);
+}

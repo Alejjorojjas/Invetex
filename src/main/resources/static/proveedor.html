@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="stylesheet" href="styles/table.css" />
+    <link rel="shortcut icon" href="images/logo2.ico" type="image/x-icon" />
+    <title>Proveedor</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="images/logo.PNG" width="200" alt="Logo Invetex"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="menu.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reportes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Opciones</a>
+              </li>
+              <li class="nav-item">
+                <!--dark mode-->
+              </li>
+            </ul>
+            <form class="d-flex">
+              <div class="dropdown">
+                <a
+                  class="btn btn-secondary dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="bi bi-person-circle" style="font-size: 20px"></i>
+                  Administrador
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                  <li>
+                    <a class="dropdown-item" href="index.html">Cerrar sesión</a>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section class="container">
+        <div class="row justify-content-between">
+          <div class="column__menu col-md-3">
+            <h5>Crear proveedor</h5>
+            <br />
+            <form id="formProveedor">
+              <div class="mb-2">
+                <label   class="form-label"
+                  >Nombre proveedor</label
+                >
+                <input type="text" class="form-control" autofocus id="NombreProveedor" />
+              </div>
+              <div class="mb-2">
+                <label  class="form-label"
+                  >Correo electrónico</label
+                >
+                <input type="email" class="form-control" id="CorreoProveedor" />
+              </div>
+              <div class="mb-2">
+                <label  class="form-label"
+                  >Telefono de contacto</label
+                >
+                <input type="tel" class="form-control" id="TelefonoProveedor" />
+              </div>
+              <div class="mb-3">
+                <label  class="form-label"
+                  >Dirección</label
+                >
+                <input type="text" class="form-control" id="DireccionProveedor" />
+              </div>
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </form>
+          </div>
+          <div class="column__menu column__menu2 col-md-8">
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="&#128270;"
+              />
+              <button class="btn btn-success" type="submit">Buscar</button>
+            </form>
+            <div class="table-responsive">
+              <table id="TablaProveedor" class="table table-striped">
+                <thead style="background-color: #113941; color: #ffffff">
+                  <tr>
+                    <th scope="col">Nombre Proveedor</th>
+                    <th scope="col">Email Proveedor</th>
+                    <th scope="col">Telefono de contacto</th>
+                    <th scope="col">Dirección</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Pie de pagina-->
+      <footer class="container__footer container-fluid text-center">
+        <img src="images/logo3.png" width="100" alt="Logo Invetex" />
+        <hr />
+        <p class="text__footer">Invetex &copy;Todos los derechos reservados</p>
+        <p class="text__footer">2023</p>
+      </footer>
+    <!--Modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen-xl-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Proveedor</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="ActualizarProveedor">
+              <div class="mb-2">
+                <label  class="form-label"
+                >Nombre Proveedor</label
+                >
+                <input type="text" class="form-control" autofocus id="NombreActualizar" />
+              </div>
+              <div class="mb-2">
+                <label  class="form-label"
+                >Correo electrónico</label
+                >
+                <input type="email" class="form-control" id="CorreoActualizar" />
+              </div>
+              <div class="mb-2">
+                <label  class="form-label"
+                >Telefono de contacto</label
+                >
+                <input type="tel" class="form-control" id="TelefonoActualizar" />
+              </div>
+              <div class="mb-3">
+                <label  class="form-label"
+                >Dirección</label
+                >
+                <input type="text" class="form-control" id="DireccionActualizar" />
+              </div>
+              <div class="mb-2">
+                <input type="hidden" class="form-control" id="IdActualizar" />
+              </div>
+              <button type="submit" class="btn btn-success">Actualizar</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/proveedores.js"></script>
+</body>
+</html>

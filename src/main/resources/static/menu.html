@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/menu.css" />
+    <link rel="shortcut icon" href="images/logo2.ico" type="image/x-icon" />
+    <title>Invetex</title>
+</head>
+<body id="body-dark" class="">
+<!--Barra de navegacion-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+        ><img src="images/logo.PNG" width="200" alt="Logo Invetex"
+        /></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo02"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reportes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Opciones</a>
+                </li>
+
+                <li class="nav-item">
+                    <!--dark mode-->
+                </li>
+            </ul>
+            <form class="d-flex">
+                <div class="dropdown">
+                    <a
+                            class="btn btn-secondary dropdown-toggle"
+                            href="#"
+                            role="button"
+                            id="dropdownMenuLink"
+                            data-bs-toggle="dropdown"
+                    >
+                        <i class="bi bi-person-circle" style="font-size: 20px"></i>
+                        Administrador
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Editar perfil</a></li>
+                        <li>
+                            <a class="dropdown-item" href="index.html">Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--Menu de botones interfaz-->
+<section class="container">
+    <div class="row justify-content-between">
+        <div class="column__menu col-md-3">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="#"><i class="bi bi-people-fill"></i> Usuarios</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#"><i class="bi bi-info-circle-fill"></i> Ayuda</a>
+                </li>
+            </ul>
+        </div>
+        <div class="column__menu col-md-8">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-box-seam-fill icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(1)" type="button" class="btn btn-success">
+                                Insumos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-person-badge icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(2)" type="button" class="btn btn-success">
+                                Clientes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-box-arrow-in-right icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(3)" type="button" class="btn btn-success">
+                                Entradas insumos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-box-arrow-in-left icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(4)" type="button" class="btn btn-success">
+                                Salidas Insumos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-truck icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(5)" type="button" class="btn btn-success">
+                                Proveedores
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-person-rolodex icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(6)" type="button" class="btn btn-success">
+                                Satélites
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-tags-fill icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(7)" type="button" class="btn btn-success">
+                                Categorias Insumos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-center h-100">
+                        <i class="bi bi-card-checklist icon__button"></i>
+                        <div class="card-body">
+                            <button onclick="navegar(8)" type="button" class="btn btn-success">
+                                Inventario
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Pie de pagina-->
+<footer class="container__footer container-fluid text-center">
+    <img src="images/logo3.png" width="100" alt="Logo Invetex" />
+    <hr />
+    <p class="text__footer">Invetex &copy;Todos los derechos reservados</p>
+    <p class="text__footer">2023</p>
+</footer>
+<script src="js/login.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+:root{
+    --color_fondo: #fe330a;
+    --color_fondo2: #113941;
+    --fuente_titulos : 'Poppins', sans-serif;
+}
+
+.column-table{
+    border: 3px solid var(--color_fondo2);
+    height: 60vh;
+    margin-top: 25px;
+}
+.btn-enviar{
+    background-color:var(--color_fondo);
+    border: none;
+    color: #ffffff;
+}
+
+.form-buscar{
+    width: 50%;
+}
+@media screen and (max-width: 1024px) {
+
+    .btn-enviar{
+        width: 97%;
+        height: 40px;
+    }
+    .column-table{
+        height: auto;
+    }
+}
+

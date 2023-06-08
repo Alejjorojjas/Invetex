@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/inicio.css">
+    <link rel="shortcut icon" href="images/logo2.ico" type="image/x-icon">
+    <title>Invetex</title>
+</head>
+<body>
+
+<header class="container-fluid main">
+    <div class="row">
+        <div class="col container-sm container__logo">
+            <div class="d-flex justify-content-center login__contenedor__logo">
+                <img src="images/logo.PNG" class="img-fluid" alt="Logo Invetex" />
+            </div>
+        </div>
+        <div class="col container-sm d-flex justify-content-center d-flex align-items-center container__formulario">
+            <form id="myForm">
+                <h2 class="login__subtitulo">Registro</h2><br>
+                <label for="input_ID" class="form-label">Número de documento</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-person-vcard-fill"></i>
+                    <select class="form-select" autofocus>
+                        <option selected>Tipo de Documento</option>
+                        <option value="1">Cédula de ciudadanía</option>
+                        <option value="2">Cédula de extranjería</option>
+                    </select>
+                    <input type="text" name="documento" class="form-control form-cc" id="input_ID" placeholder="Ingrese su número de documento" pattern="[A-Za-z0-9]{8,15}" required>
+                </div>
+                <label for="input_name" class="form-label">Nombres</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-person-fill-add"></i>
+                    <input type="text" name="nombre" class="form-control" id="input_name" placeholder="Ingrese su nombre" pattern="[A-Za-z]{1,25}" required>
+                </div>
+                <label for="input_lastName" class="form-label">Apellidos</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-person-plus-fill"></i>
+                    <input type="text" name="apellido" class="form-control" id="input_lastName" placeholder="Ingrese sus apellidos" pattern="[A-Za-z]{1,25}" required>
+                </div>
+                <label for="input_email" class="form-label">Correo electrónico</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-envelope-plus-fill"></i>
+                    <input type="email" name="email" class="form-control" id="input_email" placeholder="Ingrese su direccion email" maxlength="20" required>
+                </div>
+                <label for="input_pass" class="form-label">Contraseña</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-shield-lock-fill"></i>
+                    <input type="password" name="password" class="form-control" id="input_pass" placeholder="Ingrese una contraseña" required title="Al menos 8 caracteres, maximo 32, debe contener una letra minúscula, una mayúscula, un número y un caracter especial" >
+                </div>
+                <label for="input_pass2" class="form-label">Confirmar contraseña</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-file-earmark-lock2-fill"></i>
+                    <input type="password" name="input_pass" class="form-control" id="input_pass2" placeholder="Ingrese nuevamente su contraseña" required  title="Al menos 8 caracteres, maximo 32, debe contener una letra minúscula, una mayúscula, un número y un caracter especial" >
+                </div>
+                <label for="input_tel" class="form-label">Telefono contacto</label>
+                <div class="mb-3 d-flex justify-content-around">
+                    <i class="bi bi-telephone-fill"></i>
+                    <input type="tel" name="telefono" class="form-control" id="input_tel" placeholder="Ingrese un número de contacto" pattern="[0-9]{10}" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-primary" value="Registrar" >
+                </div><br>
+                <div class="d-flex justify-content-start">
+                    <p class="registro__parrafo">¿Ya tienes una cuenta?</p> &nbsp;
+                    <a class="registro__color__vinculo" href="index.html">Ingrese</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/registro.js"></script>
+
+
+</body>
+</html>
